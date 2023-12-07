@@ -28,6 +28,7 @@ import { SessionService } from '../session/session.service';
 import { JwtRefreshPayloadType } from './strategies/types/jwt-refresh-payload.type';
 import { Session } from '../session/entities/session.entity';
 import { JwtPayloadType } from './strategies/types/jwt-payload.type';
+import { EmailService } from 'src/email/email.service';
 
 @Injectable()
 export class AuthService {
@@ -36,6 +37,7 @@ export class AuthService {
     private usersService: UsersService,
     private sessionService: SessionService,
     private mailService: MailService,
+    private emailService: EmailService,
     private configService: ConfigService<AllConfigType>,
   ) {}
 
